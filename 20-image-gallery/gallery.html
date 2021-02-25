@@ -29,7 +29,7 @@
         body {
             padding: 50px;
             font-family: sans-serif;
-            background: linear-gradient(to right, #F93D66, #6D47D9);
+            background: linear-gradient(to right, #008080, #6d47d9);
         }
         
         h1,
@@ -80,6 +80,25 @@
     </style>
 
     <script>
+        const gallery = document.querySelector('.gallery');
+        const overlay = document.querySelector('.overlay');
+        const overlayImage = overlay.querySelector('img');
+        const overlayClose = overlay.querySelector('.close');
+
+        function generateHTML([h, v]) {
+            return `
+                <div class="item h${h} v${v}">
+                    <img src="images/${randomNumber(12)}.jpg">
+                    <div class="item__overlay">
+                        <button>View ↔ </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function randomNumber(limit) {
+            return Math.floor(Math.random() * limit) + 1;
+        }
     </script>
 </body>
 
