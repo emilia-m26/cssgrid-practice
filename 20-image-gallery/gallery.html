@@ -99,6 +99,13 @@
         function randomNumber(limit) {
             return Math.floor(Math.random() * limit) + 1;
         }
+
+        const digits = Array.from({
+            length: 50
+        }, () => [randomNumber(4), randomNumber(4)]);
+
+        const html = digits.map(generateHTML).join('');
+        gallery.innerHTML = html;
     </script>
 </body>
 
