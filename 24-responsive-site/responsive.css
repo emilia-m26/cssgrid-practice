@@ -185,6 +185,9 @@
             .top {
                 grid-template-areas: "hero hero" "cta1 cta2"
             }
+            .about {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 500px) {
