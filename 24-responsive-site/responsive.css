@@ -25,6 +25,16 @@ img {
     background-size: cover;
     background-position: bottom right;
     padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    justify-content: center;
+}
+
+.hero>* {
+    background: var(--yellow);
+    padding: 5px;
 }
 
 .cta1 {
